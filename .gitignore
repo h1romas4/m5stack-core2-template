@@ -1,0 +1,7 @@
+build/
+*.o
+*.vgm
+*.pcm
+components/synth/vgmplay
+!vgm/sn76489.vgm
+!vgm/ym2612.vgm
