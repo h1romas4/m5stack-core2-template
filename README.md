@@ -39,6 +39,7 @@ cd esp-idf
 git checkout  b64b375
 git submodule update --init --recursive
 # add arduino-esp32
+cd ../
 mkdir components
 cd components
 git submodule add https://github.com/espressif/arduino-esp32 arduino
