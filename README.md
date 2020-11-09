@@ -26,7 +26,7 @@ make menuconfig
 |[arduino-esp32](https://github.com/espressif/arduino-esp32)|latest|`28a8073`|
 |[M5Core2](https://github.com/m5stack/M5Core2)|latest|`cc551d4`|
 
-## How to make this repository
+## How to create this repository
 
 ```
 # init repository
