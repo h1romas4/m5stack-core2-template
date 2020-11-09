@@ -15,7 +15,7 @@ make -j4
 #  Serial flasher config 
 make menuconfig
 # flash
-make menuconfig
+make flash
 ```
 
 ## Dependencies
