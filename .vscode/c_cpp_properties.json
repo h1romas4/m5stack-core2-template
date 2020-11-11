@@ -6,6 +6,7 @@
                 "${workspaceFolder}/build/include",
                 "${workspaceFolder}/components/arduino/cores/**",
                 "${workspaceFolder}/components/arduino/libraries/**",
+                "${workspaceFolder}/components/arduino/variants/esp32",
                 "${workspaceFolder}/components/m5stack/M5Core2/**",
                 "${workspaceFolder}/esp-idf/components/**"
             ],
