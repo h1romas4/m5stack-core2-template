@@ -4,6 +4,8 @@ esp-idf build system template for M5Stack Core2.
 
 ## Build
 
+![](https://github.com/h1romas4/m5stack-core2-template/workflows/M5Stack/badge.svg)
+
 ```
 git clone --recursive https://github.com/h1romas4/m5stack-core2-template
 cd m5stack-core2-template
