@@ -2,6 +2,19 @@
 
 esp-idf build system template for M5Stack Core2.
 
+## Require
+
+Toolchain Setup
+
+- [Standard Setup of Toolchain for Windows](https://docs.espressif.com/projects/esp-idf/en/v3.3.4/get-started/windows-setup.html#toolchain-setup) 
+- [Standard Setup of Toolchain for Linux](https://docs.espressif.com/projects/esp-idf/en/v3.3.4/get-started/linux-setup.html)
+- [Standard Setup of Toolchain for Mac OS](https://docs.espressif.com/projects/esp-idf/en/v3.3.4/get-started/macos-setup.html)
+
+```
+$ xtensa-esp32-elf-gcc -v
+gcc version 5.2.0 (crosstool-NG crosstool-ng-1.22.0-96-g2852398)
+```
+
 ## Build
 
 ![](https://github.com/h1romas4/m5stack-core2-template/workflows/M5Stack/badge.svg)
