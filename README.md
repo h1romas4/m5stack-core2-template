@@ -17,7 +17,7 @@ gcc version 5.2.0 (crosstool-NG crosstool-ng-1.22.0-96-g2852398)
 
 ## Build
 
-![](./workflows/Build/badge.svg)
+![](https://github.com/h1romas4/m5stack-core2-template/workflows/Build/badge.svg)
 
 Project setup
 
@@ -47,7 +47,7 @@ make flash
 
 ## Binary release
 
-Extract [release.tar.gz](./releases) and Assign the binary to the following address:
+Extract [release.tar.gz](https://github.com/h1romas4/m5stack-core2-template/releases) and Assign the binary to the following address:
 
 |address|module|
 |-|-|
