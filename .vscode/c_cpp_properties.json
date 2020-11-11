@@ -3,14 +3,19 @@
         {
             "name": "Linux",
             "includePath": [
-                "${workspaceFolder}",
-                "${workspaceFolder}/components/arduino/**",
+                "${workspaceFolder}/build/include",
+                "${workspaceFolder}/components/arduino/cores/**",
+                "${workspaceFolder}/components/arduino/libraries/**",
                 "${workspaceFolder}/components/m5stack/M5Core2/**",
                 "${workspaceFolder}/esp-idf/components/**"
             ],
+            "forcedInclude" : [
+            ],
             "defines": [
-                "ESP32",
-                "CONFIG_SPIRAM_ALLOW_BSS_SEG_EXTERNAL_MEMORY"
+                "ESP32=1",
+                "ARDUINO_ARCH_ESP32=1",
+                "BOARD_HAS_PSRAM",
+                "ARDUINO=10800"
             ],
             "intelliSenseMode": "gcc-x64",
             "compilerPath": "~/devel/toolchain/xtensa-esp32-elf/bin/xtensa-esp32-elf-gcc",
