@@ -26,9 +26,8 @@ jobs:
     - name: Archive
       run: |
         tar zcvf release.tar.gz \
-            build/ota_data_initial.bin \
-            build/bootloader/bootloader.bin \
-            build/m5stack-core2-app.bin
+            build/*.bin \
+            build/bootloader/bootloader.bin
     - uses: ncipollo/release-action@v1
       with:
         artifacts: "release.tar.gz"

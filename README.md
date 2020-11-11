@@ -17,7 +17,7 @@ gcc version 5.2.0 (crosstool-NG crosstool-ng-1.22.0-96-g2852398)
 
 ## Build
 
-![](https://github.com/h1romas4/m5stack-core2-template/workflows/Build/badge.svg)
+![](./workflows/Build/badge.svg)
 
 Project setup
 
@@ -45,6 +45,32 @@ make -j4
 make flash
 ```
 
+## Binary release
+
+Extract [release.tar.gz](./releases) and Assign the binary to the following address:
+
+|address|module|
+|-|-|
+|`0x1000`|`build/bootloader/bootloader.bin`|
+|`0x8000`|`build/default.bin`|
+|`0xe000`|`build/ota_data_initial.bin`|
+|`0x10000`|`build/m5stack-core2-app.bin`|
+
+```
+python ${IDF_PATH}/components/esptool_py/esptool/esptool.py \
+    --chip esp32 \
+    --port <SET IT TO YOUR COM PORT> \
+    --baud 921600 \
+    --before default_reset \
+    --after hard_reset write_flash -z \
+    --flash_mode dio --flash_freq 80m \
+    --flash_size detect \
+    0x1000 ./build/bootloader/bootloader.bin \
+    0x8000 ./build/default.bin \
+    0xe000 ./build/ota_data_initial.bin \
+    0x10000 ./build/m5stack-core2-app.bin
+```
+
 ## Dependencies
 
 |name|version|hash|
@@ -53,7 +79,9 @@ make flash
 |[arduino-esp32](https://github.com/espressif/arduino-esp32)|latest|`28a8073`|
 |[M5Core2](https://github.com/m5stack/M5Core2)|latest|`cc551d4`|
 
-## Visual Studio Code (C/C++ extention) settings
+## Note
+
+### Visual Studio Code (C/C++ Extention) settings
 
 Change xtensa-esp32-elf-gcc path
 
@@ -91,9 +119,7 @@ Set to VSCode internal terminal for MSYS2/Windows
 }
 ```
 
-## Note
-
-How to create this repository?
+### How to create this repository?
 
 ```
 # init repository
