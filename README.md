@@ -19,7 +19,7 @@ gcc version 5.2.0 (crosstool-NG crosstool-ng-1.22.0-96-g2852398)
 
 ![](https://github.com/h1romas4/m5stack-core2-template/workflows/M5Stack/badge.svg)
 
-project setup
+Project setup
 
 ```
 # clone repository (REQUIRED: --recursive)
@@ -34,7 +34,7 @@ python -m pip install --user -r $IDF_PATH/requirements.txt
 make menuconfig
 ```
 
-build and flash
+Build and flash
 
 ```
 # This repository includes eps-idf
@@ -55,7 +55,7 @@ make flash
 
 ## VSCode settings
 
-change xtensa-esp32-elf-gcc path.
+Change xtensa-esp32-elf-gcc path
 
 ```
 $ which xtensa-esp32-elf-gcc
@@ -74,7 +74,7 @@ $ which xtensa-esp32-elf-gcc
 }
 ```
 
-## How to create this repository
+## How to create this repository?
 
 ```
 # init repository
