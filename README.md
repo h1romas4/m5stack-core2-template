@@ -41,6 +41,27 @@ make flash
 |[arduino-esp32](https://github.com/espressif/arduino-esp32)|latest|`28a8073`|
 |[M5Core2](https://github.com/m5stack/M5Core2)|latest|`cc551d4`|
 
+## VSCode settings
+
+change xtensa-esp32-elf-gcc path.
+
+```
+$ which xtensa-esp32-elf-gcc
+/home/hiromasa/devel/toolchain/xtensa-esp32-elf/bin/xtensa-esp32-elf-gcc
+```
+
+`.vscode/c_cpp_properties.json`
+```
+{
+  "configurations": [
+    {
+      "compilerPath": "~/devel/toolchain/xtensa-esp32-elf/bin/xtensa-esp32-elf-gcc",
+    }
+  ],
+  "version": 4
+}
+```
+
 ## How to create this repository
 
 ```
