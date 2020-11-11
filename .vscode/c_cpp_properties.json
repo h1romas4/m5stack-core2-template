@@ -1,7 +1,7 @@
 {
     "configurations": [
         {
-            "name": "Linux",
+            "name": "M5Stack Core2",
             "includePath": [
                 "${workspaceFolder}/build/include",
                 "${workspaceFolder}/components/arduino/cores/**",
