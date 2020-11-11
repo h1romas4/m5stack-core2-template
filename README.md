@@ -19,16 +19,28 @@ gcc version 5.2.0 (crosstool-NG crosstool-ng-1.22.0-96-g2852398)
 
 ![](https://github.com/h1romas4/m5stack-core2-template/workflows/M5Stack/badge.svg)
 
+project setup
+
 ```
+# clone repository (REQUIRED: --recursive)
 git clone --recursive https://github.com/h1romas4/m5stack-core2-template
 cd m5stack-core2-template
 # This repository includes eps-idf
 export IDF_PATH=$(pwd)/esp-idf
+# Pyhton library setup for esp-idf dependencies
+python -m pip install --user -r $IDF_PATH/requirements.txt
+# setting your serial port
+# -> Serial flasher config 
+make menuconfig
+```
+
+build and flash
+
+```
+# This repository includes eps-idf
+export IDF_PATH=$(pwd)/esp-idf
 # build
 make -j4
-# setting your serial port
-#  Serial flasher config 
-make menuconfig
 # flash
 make flash
 ```
