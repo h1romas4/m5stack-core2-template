@@ -6,7 +6,7 @@ esp-idf build system template for M5Stack Core2.
 
 Toolchain Setup
 
-- [Standard Setup of Toolchain for Windows](https://docs.espressif.com/projects/esp-idf/en/v3.3.4/get-started/windows-setup.html#toolchain-setup) 
+- [Standard Setup of Toolchain for Windows](https://docs.espressif.com/projects/esp-idf/en/v3.3.4/get-started/windows-setup.html#toolchain-setup)
 - [Standard Setup of Toolchain for Linux](https://docs.espressif.com/projects/esp-idf/en/v3.3.4/get-started/linux-setup.html)
 - [Standard Setup of Toolchain for Mac OS](https://docs.espressif.com/projects/esp-idf/en/v3.3.4/get-started/macos-setup.html)
 
@@ -30,7 +30,7 @@ export IDF_PATH=$(pwd)/esp-idf
 # Pyhton library setup for esp-idf dependencies
 python -m pip install --user -r $IDF_PATH/requirements.txt
 # setting your serial port
-# -> Serial flasher config 
+# -> Serial flasher config
 make menuconfig
 ```
 
@@ -84,7 +84,7 @@ git init
 # add esp-idf
 git submodule add https://github.com/espressif/esp-idf.git esp-idf
 cd esp-idf
-git checkout  b64b375
+git checkout b64b375
 git submodule update --init --recursive
 # add arduino-esp32
 cd ../
@@ -131,8 +131,9 @@ M5Core2/src/AXP192.o: CPPFLAGS += -Wno-maybe-uninitialized
 optional files..
 
 ```
-.github/workflows/m5stack
+.github/workflows/m5stack.yml
 .vscode/c_cpp_properties.json
 .vscode/extensions.json
 .gitignore
+.editorconfig
 ```
