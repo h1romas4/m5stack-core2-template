@@ -53,7 +53,7 @@ make flash
 |[arduino-esp32](https://github.com/espressif/arduino-esp32)|latest|`28a8073`|
 |[M5Core2](https://github.com/m5stack/M5Core2)|latest|`cc551d4`|
 
-## VSCode settings
+## Visual Studio Code (C/C++ extention) settings
 
 Change xtensa-esp32-elf-gcc path
 
@@ -74,7 +74,26 @@ $ which xtensa-esp32-elf-gcc
 }
 ```
 
-## How to create this repository?
+Set to VSCode internal terminal for MSYS2/Windows
+
+`.vscode/settings.json`
+```
+{
+    "terminal.integrated.shell.windows": "C:\\develop\\esp\\msys32\\usr\\bin\\bash.exe",
+    "terminal.integrated.env.windows": {
+        "MSYSTEM": "MINGW32",
+        "CHERE_INVOKING": "1"
+    },
+    "terminal.integrated.shellArgs.windows": [
+        "--login"
+    ],
+    "C_Cpp.intelliSenseEngine": "Default"
+}
+```
+
+## Note
+
+How to create this repository?
 
 ```
 # init repository
