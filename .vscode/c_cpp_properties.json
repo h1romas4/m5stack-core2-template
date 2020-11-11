@@ -6,8 +6,6 @@
                 "${workspaceFolder}",
                 "${workspaceFolder}/components/arduino/**",
                 "${workspaceFolder}/components/m5stack/M5Core2/**",
-                "${workspaceFolder}/components/genplus/core/**",
-                "${workspaceFolder}/components/genplus/m5stack/**",
                 "${workspaceFolder}/esp-idf/components/**"
             ],
             "defines": [
