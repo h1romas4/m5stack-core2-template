@@ -1,6 +1,9 @@
-name: Build
+name: Release
 
-on: [push]
+on:
+  push:
+    tags:
+    - '*'
 
 jobs:
   build:
@@ -20,3 +23,13 @@ jobs:
         export IDF_PATH=$(pwd)/esp-idf
         python -m pip install --user -r $IDF_PATH/requirements.txt
         make
+    - name: Archive
+      run: |
+        tar zcvf release.tar.gz \
+            build/ota_data_initial.bin \
+            build/bootloader/bootloader.bin \
+            build/m5stack-core2-app.bin
+    - uses: ncipollo/release-action@v1
+      with:
+        artifacts: "release.tar.gz"
+        token: ${{ secrets.GITHUB_TOKEN }}

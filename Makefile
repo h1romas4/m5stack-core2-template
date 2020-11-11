@@ -3,6 +3,6 @@
 # project subdirectory.
 #
 
-PROJECT_NAME := m5stack-core2-template
+PROJECT_NAME := m5stack-core2-app
 
 include $(IDF_PATH)/make/project.mk
