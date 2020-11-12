@@ -10,7 +10,10 @@ void setup()
 
 void loop()
 {
+    // M5Core2
     M5.update();
+    // esp-idf
     ESP_LOGI(TAG, "looping now.");
+    // arduino-esp32
     delay(1000);
 }
