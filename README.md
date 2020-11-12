@@ -165,6 +165,7 @@ optional files..
 .github/workflows/release.yml
 .vscode/c_cpp_properties.json
 .vscode/extensions.json
+.vscode/tasks.json
 .gitignore
 .editorconfig
 ```
