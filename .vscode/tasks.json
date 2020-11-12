@@ -1,0 +1,51 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "M5Core2 build",
+            "type": "shell",
+            "command": "IDF_PATH=${workspaceFolder}/esp-idf",
+            "args": [
+                "make",
+                "-j4"
+            ],
+            "group": "build",
+            "presentation": {
+                "clear": true,
+                "focus": true
+            },
+            "problemMatcher": "$gcc"
+        },
+        {
+            "label": "M5Core2 flash monitor",
+            "type": "shell",
+            "command": "IDF_PATH=${workspaceFolder}/esp-idf",
+            "args": [
+                "make",
+                "-j4",
+                "flash",
+                "monitor"
+            ],
+            "group": "build",
+            "presentation": {
+                "clear": true,
+                "focus": true
+            },
+            "problemMatcher": "$gcc"
+        },
+        {
+            "label": "M5Core2 clean",
+            "type": "shell",
+            "command": "IDF_PATH=${workspaceFolder}/esp-idf",
+            "args": [
+                "make",
+                "clean"
+            ],
+            "group": "build",
+            "presentation": {
+                "clear": true,
+                "focus": true
+            }
+        },
+    ]
+}
