@@ -1,0 +1,17 @@
+{
+    "terminal.integrated.env.linux": {
+        "IDF_PATH": "${workspaceFolder}/esp-idf"
+    },
+    "terminal.integrated.env.osx": {
+        "IDF_PATH": "${workspaceFolder}/esp-idf"
+    },
+    "terminal.integrated.env.windows": {
+        // "MSYSTEM": "MINGW32",
+        // "CHERE_INVOKING": "1".
+        "IDF_PATH": "${workspaceFolder}/esp-idf",
+    },
+    // "terminal.integrated.shell.windows": "C:\\develop\\esp\\msys32\\usr\\bin\\bash.exe",
+    // "terminal.integrated.shellArgs.windows": [
+    //     "--login"
+    // ],
+}
