@@ -76,8 +76,8 @@ python ${IDF_PATH}/components/esptool_py/esptool/esptool.py \
 |name|version|hash|
 |-|-|-|
 |[esp-idf](https://github.com/espressif/esp-idf)|3.3.4|`b64b375`|
-|[arduino-esp32](https://github.com/espressif/arduino-esp32)|latest|`6b0114`|
-|[M5Core2](https://github.com/m5stack/M5Core2)|latest|`68f3dc`|
+|[arduino-esp32](https://github.com/espressif/arduino-esp32)|latest|`d1a4b3b8`|
+|[M5Core2](https://github.com/m5stack/M5Core2)|latest|`5380ac63`|
 
 ## Note
 
