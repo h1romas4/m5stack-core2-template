@@ -81,7 +81,7 @@ void setup()
 
     // FreeType initialize
     ffsupport_setffs(SD);
-    if(font_face_init_fs(&font_face, "/GGOTHIC.TTF") != ESP_OK) {
+    if(font_face_init_fs(&font_face, "/M5STACK/GGOTHIC.TTF") != ESP_OK) {
         ESP_LOGE(TAG, "Font load faild.");
     }
     // Font render initialize
