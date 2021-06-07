@@ -7,19 +7,19 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-20.04
     steps:
     - uses: actions/checkout@v1
       with:
         submodules: recursive
     - name: esp-idf Toolchain Setup
       run: |
-        sudo apt-get install gcc git wget make libncurses-dev flex bison gperf python python-pip python-setuptools python-serial python-cryptography python-future
-        wget https://dl.espressif.com/dl/xtensa-esp32-elf-linux64-1.22.0-96-g2852398-5.2.0.tar.gz
-        tar zxvf xtensa-esp32-elf-linux64-1.22.0-96-g2852398-5.2.0.tar.gz
+        sudo apt install git wget flex bison gperf python3 python3-pip python3-setuptools libffi-dev libssl-dev
+        wget https://dl.espressif.com/dl/xtensa-esp32-elf-linux64-1.22.0-97-gc752ad5-5.2.0.tar.gz
+        tar zxvf xtensa-esp32-elf-linux64-1.22.0-97-gc752ad5-5.2.0.tar.gz
     - name: Build
       run: |
         export PATH=$(pwd)/xtensa-esp32-elf/bin:${PATH}
         export IDF_PATH=$(pwd)/esp-idf
-        python -m pip install --user -r $IDF_PATH/requirements.txt
-        make
+        pip3 install -r $IDF_PATH/requirements.txt
+        make -j2
