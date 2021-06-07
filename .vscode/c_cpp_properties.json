@@ -18,7 +18,7 @@
                 "BOARD_HAS_PSRAM",
                 "ARDUINO=10800"
             ],
-            "intelliSenseMode": "gcc-x64",
+            "intelliSenseMode": "gcc-x86",
             "compilerPath": "~/devel/toolchain/xtensa-esp32-elf/bin/xtensa-esp32-elf-gcc",
             "cStandard": "c11",
             "cppStandard": "c++17"
