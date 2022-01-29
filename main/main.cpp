@@ -5,9 +5,20 @@
 #include "esp_log.h"
 #include "esp_err.h"
 
+#include "UNIT_ENV.h"
+SHT3X sht30;
+QMP6988 qmp6988;
+float tmp = 0.0;
+float hum = 0.0;
+float pressure = 0.0;
+
+char str_tmp[64];
+char str_hum[64];
+char str_pressure[64];
+
 static const char *TAG = "main";
 
-static const int font_size = 44;
+static const int font_size = 22;
 static const int font_cache_size = 256;
 
 font_face_t font_face;
@@ -92,18 +103,43 @@ void setup()
     if(font_render_glyph(&font_render, 'g') != ESP_OK) {
         ESP_LOGE(TAG, "Font render faild.");
     }
+
+    // Wire init, adding the I2C bus.
+    Wire.begin(32, 33);
+    if(!qmp6988.init()) {
+        ESP_LOGE(TAG, "Could not find a valid qmp6988 sensor");
+    }
+
     // Render
-    drawString("M5Stack Core2", 8, 86, 0xffff, &font_render);
-    drawString("TrueType", 64, 134, 0x7b3d, &font_render);
-    drawString("源真ゴシック", 42, 184, 0x9665, &font_render);
+    drawString("M5Stack Core2 ENV.III SENSOR", 8, 22 * 2, 0xffff, &font_render);
+    drawString("温度:" , 64, 22 * 5, 0xffff, &font_render);
+    drawString("湿度:" , 64, 22 * 7, 0xffff, &font_render);
+    drawString("気圧:" , 64, 22 * 9, 0xffff, &font_render);
 }
 
 void loop()
 {
     // M5Core2
     M5.update();
-    // esp-idf
-    ESP_LOGI(TAG, "looping now.");
+
+    pressure = qmp6988.calcPressure() / 100;
+    if(sht30.get()==0){ //Obtain the data of shT30.  获取sht30的数据
+        tmp = sht30.cTemp;  //Store the temperature obtained from shT30.  将sht30获取到的温度存储
+        hum = sht30.humidity; //Store the humidity obtained from the SHT30.  将sht30获取到的湿度存储
+    } else {
+        tmp=0,hum=0;
+    }
+
+    sprintf(str_tmp, "%2.1f 度", tmp);
+    sprintf(str_hum, "%2.1f %%", hum);
+    sprintf(str_pressure, "%0.2f hPa", pressure);
+
+    drawString(str_tmp , 120, 22 * 5, 0xffff, &font_render);
+    drawString(str_hum , 120, 22 * 7, 0xffff, &font_render);
+    drawString(str_pressure , 120, 22 * 9, 0xffff, &font_render);
+
+    // M5.Lcd.printf("Temp: %2.1f  \r\nHumi: %2.0f%%  \r\nPressure:%0.2f hPa\r\n", tmp, hum, pressure);
+
     // arduino-esp32
     delay(1000);
 }

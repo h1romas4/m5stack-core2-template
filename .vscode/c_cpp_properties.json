@@ -8,6 +8,7 @@
                 "${workspaceFolder}/components/arduino/libraries/**",
                 "${workspaceFolder}/components/arduino/variants/esp32",
                 "${workspaceFolder}/components/m5stack/M5Core2/**",
+                "${workspaceFolder}/components/m5stack/UNIT_ENV/**",
                 "${workspaceFolder}/components/freetype/M5EPD/**",
                 "${workspaceFolder}/esp-idf/components/**"
             ],
