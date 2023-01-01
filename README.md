@@ -2,6 +2,10 @@
 
 esp-idf build system template for M5Stack Core2.
 
+**This repository has been archived. See newer version below.**
+
+> [m5stack-core2-wasm3-as](https://github.com/h1romas4/m5stack-core2-wasm3-as)
+
 ## Build
 
 ![](https://github.com/h1romas4/m5stack-core2-template/workflows/Build/badge.svg)
